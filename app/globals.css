@@ -1,49 +1,827 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-html {
-  height: 100%;
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
-  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-header {
+  width: 100%;
+
+  background: #0878bc;
+  color: #ffffff;
+
+  padding: 22px 5% 18px;
+
   display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand-logo {
+  width: 84px;
+  height: 60px;
+
+  background: #ffffff;
+
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.brand-text {
+  padding-top: 1px;
+}
+
+.brand-text h1 {
   margin: 0;
+
+  font-size: 27px;
+  line-height: 1.15;
+
+  font-weight: 700;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  font-weight: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+/* =========================================================
+   ADMIN AVATAR
+========================================================= */
+
+.admin-avatar {
+  width: 44px;
+  height: 44px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #0878bc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   STATISTICS
+   TANPA CARD
+========================================================= */
+
+.stats-section {
+  width: 100%;
+
+  background: #0878bc;
+
+  padding: 0 5% 17px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 60px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   STAT ITEM
+========================================================= */
+
+.stat-card {
+  padding: 4px 10px 5px;
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.stat-card strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+.stat-card span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TOTAL PENDAPATAN
+========================================================= */
+
+.income-section {
+  width: 100%;
+
+  background: #0878bc;
+
+  padding: 0 5% 17px;
+}
+
+.income-card {
+  width: 100%;
+
+  padding: 10px 18px;
+
+  background: #eaf4ff;
+
+  color: #0878bc;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+}
+
+.income-card strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-nav {
+  width: 100%;
+
+  min-height: 55px;
+
+  background: #ffffff;
+
+  padding: 7px 5%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  align-items: center;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.main-nav button {
+  width: 100%;
+
+  height: 37px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #0878bc;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.main-nav button:hover {
+  background: #eef7ff;
+}
+
+.main-nav button.active {
+  background: #ffd0ba;
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+.filter-section {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 22px 30px 14px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  align-items: center;
+}
+
+.filter {
+  width: 100%;
+
+  height: 36px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #0878bc;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.filter:hover {
+  transform: translateY(-1px);
+
+  opacity: 0.9;
+}
+
+.filter.active {
+  background: #ff843e;
+}
+
+
+/* =========================================================
+   PAYMENT LIST
+========================================================= */
+
+.payment-list {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 8px 30px 50px;
+}
+
+
+/* =========================================================
+   PAYMENT CARD
+========================================================= */
+
+.payment-card {
+  width: 100%;
+
+  background: #e8f3fd;
+
+  border-radius: 12px;
+
+  padding: 24px 36px 20px;
+
+  margin-bottom: 22px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   PAYMENT TOP
+========================================================= */
+
+.payment-top {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 11px;
+}
+
+
+/* =========================================================
+   NAMA PENUMPANG
+========================================================= */
+
+.payment-top h2 {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: #111111;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  flex-shrink: 0;
+
+  min-width: 86px;
+
+  padding: 6px 13px;
+
+  background: #ffffff;
+
+  color: #0878bc;
+
+  border-radius: 7px;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PAYMENT INFO
+========================================================= */
+
+.payment-info {
+  width: 100%;
+
+  margin-top: 2px;
+}
+
+.payment-info p {
+  margin: 7px 0;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+
+  color: #222222;
+}
+
+
+/* =========================================================
+   TICKET TYPE
+========================================================= */
+
+.ticket-type {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  padding: 3px 11px;
+
+  background: #ffffff;
+
+  border: 1px solid #999999;
+
+  border-radius: 2px;
+
+  color: #333333;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   PAYMENT ACTIONS
+========================================================= */
+
+.payment-actions {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 48px;
+
+  margin-top: 22px;
+}
+
+.payment-actions button {
+  width: 100%;
+
+  height: 38px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ff843e;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.payment-actions button:hover {
+  background: #f47732;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DETAIL BUTTON
+========================================================= */
+
+.detail-button {
+  width: 100%;
+
+  height: 38px;
+
+  margin-top: 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #0878bc;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.detail-button:hover {
+  background: #076ba8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-header {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .stats-section {
+    padding-left: 4%;
+    padding-right: 4%;
+
+    column-gap: 25px;
+  }
+
+  .income-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .main-nav {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .filter-section {
+    gap: 12px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .payment-list {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .payment-card {
+    padding: 22px 28px 19px;
+  }
+
+  .payment-actions {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .admin-header {
+    padding: 16px 20px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 58px;
+    height: 43px;
+  }
+
+  .brand-text h1 {
+    font-size: 20px;
+  }
+
+  .brand-text span {
+    font-size: 8px;
+  }
+
+  .admin-avatar {
+    width: 35px;
+    height: 35px;
+
+    font-size: 16px;
+  }
+
+
+  /* STATISTIK */
+
+  .stats-section {
+    padding: 0 20px 14px;
+
+    column-gap: 8px;
+  }
+
+  .stat-card strong {
+    font-size: 22px;
+  }
+
+  .stat-card span {
+    font-size: 8px;
+  }
+
+
+  /* PENDAPATAN */
+
+  .income-section {
+    padding: 0 20px 14px;
+  }
+
+  .income-card {
+    font-size: 9px;
+  }
+
+
+  /* NAVIGASI */
+
+  .main-nav {
+    padding: 7px 20px;
+
+    gap: 4px;
+  }
+
+  .main-nav button {
+    font-size: 9px;
+  }
+
+
+  /* FILTER */
+
+  .filter-section {
+    padding: 18px 20px 10px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 9px;
+  }
+
+  .filter {
+    height: 33px;
+
+    font-size: 9px;
+  }
+
+
+  /* PAYMENT */
+
+  .payment-list {
+    padding: 8px 20px 40px;
+  }
+
+  .payment-card {
+    padding: 18px;
+
+    margin-bottom: 17px;
+  }
+
+  .payment-top h2 {
+    font-size: 14px;
+  }
+
+  .payment-info p {
+    font-size: 10px;
+
+    margin: 6px 0;
+  }
+
+  .ticket-type {
+    font-size: 9px;
+  }
+
+  .payment-actions {
+    gap: 8px;
+
+    margin-top: 18px;
+  }
+
+  .payment-actions button,
+  .detail-button {
+    height: 34px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .brand-logo {
+    width: 50px;
+    height: 38px;
+  }
+
+  .brand-text h1 {
+    font-size: 17px;
+  }
+
+  .brand-text span {
+    font-size: 7px;
+  }
+
+  .admin-avatar {
+    width: 31px;
+    height: 31px;
+  }
+
+  .stat-card strong {
+    font-size: 19px;
+  }
+
+  .stat-card span {
+    font-size: 7px;
+  }
+
+  .payment-card {
+    padding: 16px;
+  }
+
+  .payment-top h2 {
+    font-size: 13px;
+  }
+
+  .payment-info p {
+    font-size: 9px;
+  }
+
+  .payment-actions {
+    gap: 6px;
+  }
+
+  .payment-actions button,
+  .detail-button {
+    height: 31px;
+
+    font-size: 8px;
   }
 }
