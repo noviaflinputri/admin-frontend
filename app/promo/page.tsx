@@ -126,7 +126,7 @@ export default function PromoPage() {
           </div>
         </div>
 
-        {/* AVATAR PROFIL BISA DIKLIK KEMBALI KE /PROFIL */}
+        {/* AVATAR PROFIL */}
         <button
           className="admin-avatar"
           onClick={() => {
@@ -164,8 +164,15 @@ export default function PromoPage() {
         </section>
       </header>
 
-      {/* NAVIGASI */}
+      {/* NAVIGASI (URUTAN BARU: Grafik -> Bayar -> Penumpang -> Promo) */}
       <nav className="main-nav">
+        <button
+          onClick={() => {
+            window.location.href = "/grafik";
+          }}
+        >
+          Grafik
+        </button>
         <button
           onClick={() => {
             window.location.href = "/bayar";
@@ -181,13 +188,6 @@ export default function PromoPage() {
           Penumpang
         </button>
         <button className="active">Promo</button>
-        <button
-          onClick={() => {
-            window.location.href = "/grafik";
-          }}
-        >
-          Grafik
-        </button>
       </nav>
 
       {/* JUDUL PROMO & TOMBOL TAMBAH */}

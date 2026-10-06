@@ -41,11 +41,11 @@ export default function ProfilPage() {
           HEADER BIRU ATAS
       ========================= */}
       <header className="profil-header">
-        {/* TOMBOL KEMBALI */}
+        {/* TOMBOL KEMBALI KE /GRAFIK */}
         <button
           className="back-button"
           onClick={() => {
-            window.location.href = "/bayar";
+            window.location.href = "/grafik";
           }}
         >
           ← Kembali Ke Admin
