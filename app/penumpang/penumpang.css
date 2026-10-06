@@ -1,0 +1,456 @@
+/* =========================================================
+   PENUMPANG PAGE
+   File: app/penumpang/penumpang.css
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-page *,
+.admin-page *::before,
+.admin-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER UTAMA
+========================================================= */
+
+.admin-page .admin-header {
+  width: 100%;
+  background: #0878bd;
+  padding: 24px 5% 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BRAND */
+
+.admin-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.admin-page .brand-logo {
+  width: 90px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-page .brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.admin-page .brand-text {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.admin-page .brand-text h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.admin-page .brand-text span {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* AVATAR */
+
+.admin-page .admin-avatar {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   STATISTIK
+========================================================= */
+
+.admin-page .stats-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card strong {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.admin-page .stat-card span {
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   TOTAL PENDAPATAN
+========================================================= */
+
+.admin-page .income-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px;
+  background: #edf6fc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #0878bd;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card strong {
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.admin-page .main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 5%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.admin-page .main-nav button {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #0878bd;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-page .main-nav button:hover {
+  background: #edf6fc;
+}
+
+.admin-page .main-nav button.active {
+  background: #ffcdbb;
+  color: #0878bd;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PENUMPANG LIST & CARDS
+========================================================= */
+
+.passenger-list-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 28px auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.passenger-card {
+  width: 100%;
+  background: #edf6fc;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.passenger-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* BADGE STATUS */
+
+.status-badge {
+  padding: 6px 22px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #ffffff;
+  color: #2c3e50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.status-badge.status-ditolak {
+  color: #e74c3c;
+}
+
+/* ITEM CONTENT */
+
+.passenger-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 2px 0;
+}
+
+.passenger-route {
+  font-size: 14px;
+  color: #555555;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.passenger-meta {
+  font-size: 13px;
+  color: #444444;
+  margin: 0 0 8px 0;
+}
+
+.passenger-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0 0 18px 0;
+}
+
+.passenger-price .category {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+}
+
+/* BUTTON LIHAT DETAIL */
+
+.detail-button {
+  width: 100%;
+  padding: 12px;
+  background: #ff8533;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.detail-button:hover {
+  background: #f07320;
+}
+
+.detail-button:active {
+  transform: scale(0.99);
+}
+
+
+/* =========================================================
+   MODAL DETAIL
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 12px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0878bd;
+  font-weight: 700;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #888888;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-bottom: 1px dashed #f0f0f0;
+  padding-bottom: 6px;
+}
+
+.detail-row span {
+  color: #666666;
+}
+
+.detail-row strong {
+  color: #222222;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-modal-btn {
+  width: 100%;
+  padding: 11px;
+  background: #ff8533;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  background: #f07320;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .admin-page .brand-text h1 {
+    font-size: 20px;
+  }
+
+  .admin-page .stat-card strong {
+    font-size: 22px;
+  }
+
+  .passenger-name {
+    font-size: 18px;
+  }
+
+  .passenger-price {
+    font-size: 18px;
+  }
+}
