@@ -1,0 +1,508 @@
+/* =========================================================
+   DASHBOARD HOME PAGE
+   File: app/page.css
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-page *,
+.admin-page *::before,
+.admin-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER UTAMA (DISESUAIKAN DENGAN PENUMPANG)
+========================================================= */
+
+.admin-page .admin-header {
+  width: 100%;
+  background: #0878bd;
+  padding: 24px 5% 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BRAND */
+
+.admin-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.admin-page .brand-logo {
+  width: 90px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-page .brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.admin-page .brand-text {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.admin-page .brand-text h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.admin-page .brand-text span {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* AVATAR */
+
+.admin-page .admin-avatar {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* STATISTIK HEADER */
+
+.admin-page .stats-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card strong {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.admin-page .stat-card span {
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* PENDAPATAN HEADER */
+
+.admin-page .income-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px;
+  background: #edf6fc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #0878bd;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card strong {
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.admin-page .main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 5%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.admin-page .main-nav button {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #0878bd;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-page .main-nav button:hover {
+  background: #edf6fc;
+}
+
+.admin-page .main-nav button.active {
+  background: #ffcdbb;
+  color: #0878bd;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DASHBOARD CONTENT
+========================================================= */
+
+.dashboard-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 28px auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* METRICS GRID */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.metric-card {
+  background: #edf6fc;
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f07320;
+}
+
+.metric-label {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #0878bd;
+  font-weight: 600;
+}
+
+/* FILTER BUTTONS */
+
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.filter-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ff8533;
+  color: #0878bd;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #f07320;
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background: #f07320;
+  color: #ffffff;
+}
+
+/* CHART CARD GENERAL */
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.chart-header-text h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #222222;
+  font-weight: 700;
+}
+
+.chart-header-text span {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* LINE CHART SVG */
+
+.line-chart-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #666666;
+  font-weight: 600;
+  text-align: right;
+  min-width: 55px;
+}
+
+.chart-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.svg-chart {
+  width: 100%;
+  height: 140px;
+}
+
+.grid-line {
+  stroke: #dddddd;
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+}
+
+.x-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #666666;
+  font-weight: 600;
+  margin-top: 6px;
+  padding: 0 4px;
+}
+
+/* BAR CHART */
+
+.bar-chart-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.bar-chart-area {
+  flex: 1;
+  position: relative;
+  height: 150px;
+}
+
+.grid-lines-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-line-item {
+  width: 100%;
+  border-bottom: 1px dashed #dddddd;
+}
+
+.bars-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10px;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  width: 24px;
+}
+
+.bar {
+  width: 100%;
+  background: #00738c;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease;
+}
+
+.bar-label {
+  font-size: 10px;
+  color: #666666;
+  margin-top: 6px;
+}
+
+/* STATUS BUS BOOKING */
+
+.status-booking-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 13px;
+  color: #333333;
+  font-weight: 700;
+}
+
+.status-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-label {
+  width: 70px;
+  font-size: 11px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-fill.approved {
+  background: #0073e6;
+}
+
+.progress-fill.pending {
+  background: #ff8533;
+}
+
+.progress-fill.rejected {
+  background: #e74c3c;
+}
+
+.status-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: #333333;
+  width: 15px;
+  text-align: right;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 650px) {
+  .metrics-grid,
+  .filter-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 18px;
+  }
+
+  .admin-page .brand-text h1 {
+    font-size: 20px;
+  }
+
+  .admin-page .stat-card strong {
+    font-size: 22px;
+  }
+}
