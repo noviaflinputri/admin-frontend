@@ -1,0 +1,532 @@
+/* =========================================================
+   PROMO PAGE
+   File: app/promo/promo.css
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-page *,
+.admin-page *::before,
+.admin-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER UTAMA
+========================================================= */
+
+.admin-page .admin-header {
+  width: 100%;
+  background: #0878bd;
+  padding: 24px 5% 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BRAND */
+
+.admin-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.admin-page .brand-logo {
+  width: 90px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-page .brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.admin-page .brand-text {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.admin-page .brand-text h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.admin-page .brand-text span {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* AVATAR */
+
+.admin-page .admin-avatar {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   STATISTIK (TANPA KOTAK & UKURAN SAMADENGAN /BAYAR)
+========================================================= */
+
+.admin-page .stats-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card strong {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.admin-page .stat-card span {
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   TOTAL PENDAPATAN
+========================================================= */
+
+.admin-page .income-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px;
+  background: #edf6fc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #0878bd;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card strong {
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.admin-page .main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 5%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.admin-page .main-nav button {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #0878bd;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-page .main-nav button:hover {
+  background: #edf6fc;
+}
+
+.admin-page .main-nav button.active {
+  background: #ffcdbb;
+  color: #0878bd;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROMO CONTENT
+========================================================= */
+
+.admin-page .promo-header-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 28px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-page .promo-header-section h2 {
+  margin: 0;
+  color: #222222;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-page .add-promo-button {
+  min-width: 90px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #ff873d;
+  color: #ffffff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-page .add-promo-button:hover {
+  background: #f9782d;
+  transform: translateY(-1px);
+}
+
+.admin-page .promo-list {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-page .promo-card {
+  width: 100%;
+  padding: 18px;
+  background: #edf6fc;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin-page .promo-card-top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-page .promo-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.admin-page .promo-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.admin-page .promo-title-wrapper h3 {
+  margin: 0;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.admin-page .promo-code {
+  display: block;
+  margin-top: 2px;
+  color: #666666;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.admin-page .promo-status {
+  padding: 5px 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.admin-page .status-active {
+  background: #0878bd;
+  color: #ffffff;
+}
+
+.admin-page .status-inactive {
+  background: #ffffff;
+  color: #0878bd;
+  border: 1px solid #0878bd;
+}
+
+.admin-page .promo-description {
+  margin: 14px 0 12px;
+  color: #333333;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-page .promo-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-page .promo-info span {
+  color: #333333;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.admin-page .promo-info span:first-child {
+  font-weight: 700;
+}
+
+.admin-page .promo-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.admin-page .promo-action-button {
+  width: 100%;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff873d;
+  color: #ffffff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-page .promo-action-button:hover {
+  background: #f9782d;
+}
+
+
+/* =========================================================
+   MODAL & EMPTY STATE
+========================================================= */
+
+.admin-page .empty-promo {
+  width: 100%;
+  padding: 35px 20px;
+  background: #edf6fc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.admin-page .empty-promo h3 {
+  margin: 0 0 6px;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.admin-page .empty-promo p {
+  margin: 0;
+  color: #666666;
+  font-size: 12px;
+}
+
+.admin-page .promo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-page .promo-modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.admin-page .promo-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.admin-page .promo-modal-header h2 {
+  margin: 0;
+  color: #0878bd;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-page .close-modal {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666666;
+}
+
+.admin-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.admin-page .form-group label {
+  color: #222222;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-page .form-group input,
+.admin-page .form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 12px;
+}
+
+.admin-page .form-group textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+
+.admin-page .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.admin-page .modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.admin-page .cancel-button,
+.admin-page .save-button {
+  min-height: 38px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin-page .cancel-button {
+  background: #e5e5e5;
+  color: #333333;
+}
+
+.admin-page .save-button {
+  background: #ff873d;
+  color: #ffffff;
+}

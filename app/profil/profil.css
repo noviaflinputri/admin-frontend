@@ -1,0 +1,267 @@
+/* =========================================================
+   PROFIL PAGE
+   File: app/profil/profil.css
+========================================================= */
+
+.profil-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 0 50px 0;
+  background: #ffffff;
+  color: #2b3a4a;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.profil-page *,
+.profil-page *::before,
+.profil-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER BIRU ATAS
+========================================================= */
+
+.profil-page .profil-header {
+  width: 100%;
+  background: #0878bd;
+  padding: 20px 5% 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* TOMBOL KEMBALI */
+
+.profil-page .back-button {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profil-page .back-button:hover {
+  text-decoration: underline;
+}
+
+/* AVATAR PROFIL */
+
+.profil-page .profile-avatar-wrapper {
+  margin-top: 10px;
+}
+
+.profil-page .profile-avatar {
+  width: 85px;
+  height: 85px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profil-page .profile-avatar svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* NAMA & EMAIL */
+
+.profil-page .profile-name {
+  margin: 12px 0 2px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.profil-page .profile-email {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 16px;
+}
+
+/* BADGES STATUS */
+
+.profil-page .profile-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profil-page .badge {
+  min-width: 105px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.profil-page .badge-role {
+  background: #ffffff;
+  color: #556677;
+}
+
+.profil-page .badge-status {
+  background: #ffffff;
+  color: #556677;
+}
+
+
+/* =========================================================
+   STATISTIK BAR (BIRU MUDA FULL WIDTH)
+========================================================= */
+
+.profil-page .stats-bar {
+  width: 100%;
+  background: #e7f2fc;
+  padding: 14px 5%;
+  border-bottom: 1px solid #d0e3f5;
+}
+
+.profil-page .stats-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.profil-page .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profil-page .stat-card strong {
+  color: #2b3a4a;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.profil-page .stat-card span {
+  margin-top: 4px;
+  color: #556677;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   KONTEN CONTAINER
+========================================================= */
+
+.profil-page .profil-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 28px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profil-page .profil-card {
+  width: 100%;
+  padding: 24px 28px;
+  background: #e7f2fc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.profil-page .card-title {
+  margin: 0 0 18px;
+  color: #6c7a89;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* INFORMASI ADMIN ITEMS (MENYESUAIKAN WARNA FIGMA) */
+
+.profil-page .info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.profil-page .info-item label {
+  display: block;
+  font-size: 12px;
+  color: #778899;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.profil-page .info-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #1a2b3c;
+  font-weight: 700;
+}
+
+/* AKTIFITAS TERAKHIR LIST */
+
+.profil-page .activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.profil-page .activity-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profil-page .activity-text {
+  margin: 0;
+  font-size: 13px;
+  color: #2b3a4a;
+  font-weight: 600;
+}
+
+.profil-page .activity-date {
+  font-size: 11px;
+  color: #778899;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .profil-page .back-button {
+    position: static;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+
+  .profil-page .stat-card strong {
+    font-size: 22px;
+  }
+
+  .profil-page .stat-card span {
+    font-size: 11px;
+  }
+}
