@@ -1,0 +1,641 @@
+/* =========================================================
+   BAYAR PAGE
+   File: app/bayar/bayar.css
+========================================================= */
+
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-page *,
+.admin-page *::before,
+.admin-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER UTAMA
+========================================================= */
+
+.admin-page .admin-header {
+  width: 100%;
+  background: #0878bd;
+  padding: 24px 5% 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.admin-page .brand-logo {
+  width: 90px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-page .brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.admin-page .brand-text {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.admin-page .brand-text h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.admin-page .brand-text span {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.admin-avatar-link {
+  text-decoration: none;
+}
+
+.admin-page .admin-avatar {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 24px;
+  right: 5%;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.admin-page .admin-avatar:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   STATISTIK & PENDAPATAN
+========================================================= */
+
+.admin-page .stats-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .stat-card strong {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.admin-page .stat-card span {
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.admin-page .income-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px;
+  background: #edf6fc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #0878bd;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+}
+
+.admin-page .income-card strong {
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.admin-page .main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 5%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.admin-page .main-nav .nav-item {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #0878bd;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-page .main-nav .nav-item:hover {
+  background: #edf6fc;
+}
+
+.admin-page .main-nav .nav-item.active {
+  background: #ffcdbb;
+  color: #0878bd;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FILTER SUB-NAV
+========================================================= */
+
+.filter-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.filter-btn {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0878bd;
+  color: #ffffff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #06629c;
+}
+
+.filter-btn.active {
+  background: #ff8533;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LIST & CARD PEMBAYARAN
+========================================================= */
+
+.passenger-list-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 28px auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.passenger-card {
+  width: 100%;
+  background: #e8f3fb;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.passenger-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+/* BADGE STATUS */
+
+.status-badge {
+  padding: 4px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.status-badge.status-menunggu {
+  color: #0878bd;
+}
+
+.status-badge.status-disetujui {
+  color: #0878bd;
+}
+
+.status-badge.status-ditolak {
+  color: #0878bd;
+}
+
+/* CONTENT ITEM */
+
+.passenger-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 12px 0;
+}
+
+.bayar-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.bayar-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.bayar-info-item .icon {
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.price-tag {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+
+.category-tag {
+  background: #ffffff;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+  border: 1px solid #d0d0d0;
+  margin-left: 6px;
+}
+
+/* TOMBOL AKSI MENUNGGU */
+
+.bayar-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #ff8533;
+  color: #ffffff;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.action-btn:hover {
+  background: #f07320;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+/* TOMBOL LIHAT DETAIL (DISETUJUI / DITOLAK) */
+
+.bayar-actions-detail {
+  width: 100%;
+}
+
+.detail-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #0878bd;
+  color: #ffffff;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.detail-btn:hover {
+  background: #06629c;
+}
+
+.detail-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   CUSTOM MODAL CARD
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.confirm-card-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: modalScale 0.2s ease-out;
+}
+
+.confirm-header h3 {
+  margin: 0 0 12px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0878bd;
+}
+
+.confirm-body p {
+  margin: 0 0 20px 0;
+  font-size: 13.5px;
+  color: #444444;
+  line-height: 1.5;
+}
+
+.confirm-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #333333;
+}
+
+.acc-btn {
+  background: #27ae60;
+  color: #ffffff;
+}
+
+.reject-btn {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: modalScale 0.2s ease-out;
+}
+
+/* Modifikasi Modal Detail Agar Bentuk Kotak 2 Kolom */
+.modal-content.detail-modal-wide {
+  max-width: 580px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #0878bd;
+  color: #ffffff;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Layout Grid 2 Kolom Modal Detail */
+.detail-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.detail-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-info-side p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #333333;
+}
+
+.detail-bukti-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.detail-bukti-side p {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #333333;
+}
+
+.detail-bukti-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+@keyframes modalScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .admin-page .brand-text h1 {
+    font-size: 20px;
+  }
+
+  .admin-page .stat-card strong {
+    font-size: 22px;
+  }
+
+  .passenger-name {
+    font-size: 17px;
+  }
+
+  .filter-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bayar-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

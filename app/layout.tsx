@@ -1,10 +1,5 @@
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Panel Admin",
-  description: "Manajemen Pembayaran dan Penumpang",
-};
+import "./bayar/bayar.css";
 
 export default function RootLayout({
   children,
