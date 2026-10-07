@@ -468,16 +468,11 @@
    CONTENT
 ========================================================= */
 
-.admin-page .content-body {
-
-  width: 100%;
-
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  padding: 28px 5% 50px;
-
+.content-body {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 0 50px;
 }
 
 /* =========================================================
@@ -778,8 +773,6 @@
 
   align-items: center;
 
-  gap: 8px;
-
   margin-top: 8px;
 
   font-size: 12px;
@@ -794,7 +787,9 @@
 
   text-align: center;
 
-  flex: 1;
+  flex: 0 0 auto;
+
+  transform: translateX(-50%);
 
 }
 
@@ -803,87 +798,79 @@
 ========================================================= */
 
 .admin-page .bar-graph-flex {
-
   width: 100%;
-
   display: flex;
-
   gap: 12px;
-
   min-height: 210px;
-
 }
 
 .admin-page .bar-container-area {
-
   flex: 1;
-
   min-width: 0;
-
   display: flex;
-
   flex-direction: column;
-
 }
 
+/* Area batang dan garis dasar */
 .admin-page .bars-wrapper {
-
   flex: 1;
-
   min-height: 170px;
-
   display: flex;
-
-  justify-content: space-around;
-
   align-items: flex-end;
-
+  justify-content: initial;
   border-bottom: 1px dashed #cbd5e1;
-
-  padding: 0 8px 2px;
-
+  padding: 0;
 }
 
+/* Setiap kolom mendapatkan lebar yang SAMA */
 .admin-page .bar-col {
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: flex-end;
-
+  flex: 1;
+  width: auto;
+  min-width: 0;
   height: 100%;
-
-  width: 42px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   gap: 5px;
-
 }
 
+/* Angka di atas batang */
 .admin-page .bar-value {
-
   font-size: 11px;
-
   color: #334155;
-
   font-weight: 700;
-
+  text-align: center;
 }
 
+/* Batang */
 .admin-page .teal-bar {
-
-  width: 100%;
-
+  width: 64px;
+  max-width: 70%;
   min-height: 2px;
-
   background: #008080;
-
   border-radius: 4px 4px 0 0;
-
   transition: height 0.4s ease;
+}
 
+/* LABEL HARI — dibuat satu garis tengah dengan batang */
+.admin-page .bar-container-area .x-labels {
+  width: 100%;
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #263b53;
+  font-weight: 700;
+}
+
+/* Setiap label mempunyai lebar yang sama dengan kolom batang */
+.admin-page .bar-container-area .x-labels span {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  transform: none;
 }
 
 /* =========================================================
